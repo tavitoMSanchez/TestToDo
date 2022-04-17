@@ -19806,8 +19806,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
           return $data.formx.title = $event;
         }),
         name: "",
-        id: "",
-        required: ""
+        id: ""
       }, null, 2
       /* CLASS */
       ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.formx.title]]), _hoisted_11])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [_hoisted_14, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
@@ -19819,8 +19818,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
           return $data.formx.description = $event;
         }),
         name: "",
-        id: "",
-        required: ""
+        id: ""
       }, null, 2
       /* CLASS */
       ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.formx.description]]), _hoisted_15])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [_hoisted_17, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_18, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("textarea", {
@@ -19833,8 +19831,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         }),
         "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)([{
           'is-invalid': $data.attemptSubmit && $options.missingDetails
-        }, "form-control"]),
-        required: ""
+        }, "form-control"])
       }, " ", 2
       /* CLASS */
       ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.formx.details]]), _hoisted_19])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"col-12 mb-2\">\r\n                                  <div class=\"form-group\">\r\n                                      <label >Usuario</label>\r\n                                      <input type=\"number\" class=\"form-control\" v-model=\"formx.user_id\"   name=\"\" id=\"\">\r\n                                  </div>\r\n                              </div> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_20, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {

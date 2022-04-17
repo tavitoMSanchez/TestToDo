@@ -14,21 +14,21 @@
                                   <div class="form-group">
                                       <label >Titulo</label>
                                       <input type="number" v-show="false" v-model="formx.id"  name="" id="">
-                                      <input type="text" class="form-control" v-model="formx.title" v-bind:class="{ 'is-invalid': attemptSubmit && missingTitle }"  name="" id="" required>
+                                      <input type="text" class="form-control" v-model="formx.title" v-bind:class="{ 'is-invalid': attemptSubmit && missingTitle }"  name="" id="" >
                                       <div class="invalid-feedback">El campo es requiredo.</div>
                                   </div>
                               </div>
                             <div class="col-12 mb-2">
                                   <div class="form-group">
                                       <label >Descripcion</label>
-                                      <input type="text" class="form-control" v-model="formx.description" v-bind:class="{ 'is-invalid': attemptSubmit && missingDescription }"  name="" id="" required>
+                                      <input type="text" class="form-control" v-model="formx.description" v-bind:class="{ 'is-invalid': attemptSubmit && missingDescription }"  name="" id="" >
                                       <div class="invalid-feedback">El campo es requiredo.</div>
                                   </div>
                               </div>
                               <div class="col-12 mb-2">
                                   <label for="floatingTextarea">Detalles</label>
                                   <div class="form-floating">                                  
-                                      <textarea id="floatingTextarea" style="height:100px" v-model="formx.details" v-bind:class="{ 'is-invalid': attemptSubmit && missingDetails }" class="form-control" required> </textarea>
+                                      <textarea id="floatingTextarea" style="height:100px" v-model="formx.details" v-bind:class="{ 'is-invalid': attemptSubmit && missingDetails }" class="form-control" > </textarea>
                                       <div class="invalid-feedback">El campo es requiredo.</div>
                                   </div>
                               </div>
