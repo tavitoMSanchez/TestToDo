@@ -104,7 +104,8 @@ const router = useRouter()
                     visibleAdd: true,
                 }
             },
-             methods:{               
+             methods:{   
+                //metodo ocultar boton de agregar y eliminar            
                   inputClick(val) {
                     if(val == true)
                     {
@@ -114,15 +115,18 @@ const router = useRouter()
                     this.visibleDelete = false;  
                     this.visibleAdd = true;    
                     }            
-                   },                  
+                   }, 
+                //mostrar modal                 
                    showModal() {
                     this.isModalVisible = true;
                     this.$refs.childComponent.resetForm();
                    },
+                //cerrar modal
                    closeModal() {
                     this.isModalVisible = false;
                     this.$refs.childComponent.resetForm();
                    },
+                   // creacion de tabla pendiente y completadas
                     table(){
                             this.$nextTick(() =>{
                                 $('#myTable').DataTable({
@@ -176,6 +180,7 @@ const router = useRouter()
                                 });
                             });
                         },
+                    //obtencion de tareas pendientes y llenado en la tabla.
                     getTask(){
                                 axios.get("api/get_tasks").then(res=>{
                                 this.tasks = res.data
@@ -183,6 +188,7 @@ const router = useRouter()
                                 this.table()
                             });
                         },
+                    //obtencion de tareas completadas y llenado en la tabla.
                     getTaskComplete(){
                                 axios.get("api/get_tasks_complete").then(res=>{
                                 this.tasksComplete = res.data
@@ -190,6 +196,7 @@ const router = useRouter()
                                 this.tableComplete()
                             });
                         },
+                    //Borrar todas las tareas completadas.
                     deleteTasksComplete(){
                                 Swal.fire({
                                 icon: "warning",
@@ -222,6 +229,7 @@ const router = useRouter()
                                 }
                             })            
                         },
+                    //obtener datos para editar la tarea
                     editTask (id){                        
                         axios.get('/api/get_edit_task/'+id)
                                     .then((response) =>{
@@ -235,13 +243,9 @@ const router = useRouter()
                                                     icon: "warning",
                                                     title:error
                                         })
-                        })
-                
-                    //         this.$router.push({
-                    //     name: 'editarTarea', 
-                    //     params: { id: id }
-                    // });
+                        })                
                             },
+                    // borrar unica tarea
                     deleteTask (id){      
                             Swal.fire({
                                 icon: "warning",
@@ -274,6 +278,7 @@ const router = useRouter()
                                 }
                             })
                     },
+                    //metodo para dejar completada una tarea.
                     completeTask (id){      
                             Swal.fire({
                                 icon: "warning",
@@ -306,6 +311,7 @@ const router = useRouter()
                                 }
                             })
                     },
+                    // guarda nueva tarea o actualiza
                     saveTask(obj){                      
                         if(obj.id == ''){
                             axios.post("/api/add_task/",obj)
@@ -339,12 +345,7 @@ const router = useRouter()
                             {
                                 console.log(error);
                             })
-                        }
-            // const formData = new FormData()
-            // formData.append('title',form.value.title)
-            // formData.append('description',form.value.description)
-            // formData.append('details',form.value.details)
-            // formData.append('user_id',form.value.user_id)         
+                        }             
            
         },      
    }

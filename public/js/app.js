@@ -18692,6 +18692,7 @@ var router = (0,vue_router__WEBPACK_IMPORTED_MODULE_5__.useRouter)();
     };
   },
   methods: {
+    //metodo ocultar boton de agregar y eliminar            
     inputClick: function inputClick(val) {
       if (val == true) {
         this.visibleAdd = false;
@@ -18701,14 +18702,17 @@ var router = (0,vue_router__WEBPACK_IMPORTED_MODULE_5__.useRouter)();
         this.visibleAdd = true;
       }
     },
+    //mostrar modal                 
     showModal: function showModal() {
       this.isModalVisible = true;
       this.$refs.childComponent.resetForm();
     },
+    //cerrar modal
     closeModal: function closeModal() {
       this.isModalVisible = false;
       this.$refs.childComponent.resetForm();
     },
+    // creacion de tabla pendiente y completadas
     table: function table() {
       this.$nextTick(function () {
         $('#myTable').DataTable({
@@ -18762,6 +18766,7 @@ var router = (0,vue_router__WEBPACK_IMPORTED_MODULE_5__.useRouter)();
         });
       });
     },
+    //obtencion de tareas pendientes y llenado en la tabla.
     getTask: function getTask() {
       var _this = this;
 
@@ -18772,6 +18777,7 @@ var router = (0,vue_router__WEBPACK_IMPORTED_MODULE_5__.useRouter)();
         _this.table();
       });
     },
+    //obtencion de tareas completadas y llenado en la tabla.
     getTaskComplete: function getTaskComplete() {
       var _this2 = this;
 
@@ -18782,6 +18788,7 @@ var router = (0,vue_router__WEBPACK_IMPORTED_MODULE_5__.useRouter)();
         _this2.tableComplete();
       });
     },
+    //Borrar todas las tareas completadas.
     deleteTasksComplete: function deleteTasksComplete() {
       var _this3 = this;
 
@@ -18812,6 +18819,7 @@ var router = (0,vue_router__WEBPACK_IMPORTED_MODULE_5__.useRouter)();
         }
       });
     },
+    //obtener datos para editar la tarea
     editTask: function editTask(id) {
       var _this4 = this;
 
@@ -18827,11 +18835,9 @@ var router = (0,vue_router__WEBPACK_IMPORTED_MODULE_5__.useRouter)();
           icon: "warning",
           title: error
         });
-      }); //         this.$router.push({
-      //     name: 'editarTarea', 
-      //     params: { id: id }
-      // });
+      });
     },
+    // borrar unica tarea
     deleteTask: function deleteTask(id) {
       var _this5 = this;
 
@@ -18862,6 +18868,7 @@ var router = (0,vue_router__WEBPACK_IMPORTED_MODULE_5__.useRouter)();
         }
       });
     },
+    //metodo para dejar completada una tarea.
     completeTask: function completeTask(id) {
       var _this6 = this;
 
@@ -18892,6 +18899,7 @@ var router = (0,vue_router__WEBPACK_IMPORTED_MODULE_5__.useRouter)();
         }
       });
     },
+    // guarda nueva tarea o actualiza
     saveTask: function saveTask(obj) {
       var _this7 = this;
 
@@ -18923,12 +18931,7 @@ var router = (0,vue_router__WEBPACK_IMPORTED_MODULE_5__.useRouter)();
         })["catch"](function (error) {
           console.log(error);
         });
-      } // const formData = new FormData()
-      // formData.append('title',form.value.title)
-      // formData.append('description',form.value.description)
-      // formData.append('details',form.value.details)
-      // formData.append('user_id',form.value.user_id)         
-
+      }
     }
   }
 });
