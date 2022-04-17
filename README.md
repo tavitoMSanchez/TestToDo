@@ -2,12 +2,15 @@
 
 Realizado con Laravel - Vue
 
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=exam
-DB_USERNAME=root
-DB_PASSWORD=
+Configurado el archivo de manera Local
+
+<br>
+DB_CONNECTION=mysql<br>
+DB_HOST=127.0.0.1<br>
+DB_PORT=3306<br>
+DB_DATABASE=exam<br>
+DB_USERNAME=root<br>
+DB_PASSWORD=<br>
 
 <h5>Se realizo la integración de  Datatable, Login, Providers Passport, SweetAlert2</5>
 ##
