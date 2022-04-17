@@ -200,7 +200,7 @@ const router = useRouter()
                     deleteTasksComplete(){
                                 Swal.fire({
                                 icon: "warning",
-                                title:"¿Seguro desea eliminar?",
+                                title:"¿Seguro desea eliminar todas las tareas?",
                                 showCancelButton: true,
                                 confirmButtonColor:'#3085d6',
                                 cancelButtonText:'No',

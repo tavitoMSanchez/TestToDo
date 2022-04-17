@@ -18794,7 +18794,7 @@ var router = (0,vue_router__WEBPACK_IMPORTED_MODULE_5__.useRouter)();
 
       Swal.fire({
         icon: "warning",
-        title: "¿Seguro desea eliminar?",
+        title: "¿Seguro desea eliminar todas las tareas?",
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonText: 'No',
