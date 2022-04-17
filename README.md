@@ -2,6 +2,8 @@
 
 Realizado con Laravel - Vue
 
+login : test@mail.com password:1234abcd
+
 Configurado el archivo de manera Local
 Configuración del .env<br>
 DB_CONNECTION=mysql<br>
