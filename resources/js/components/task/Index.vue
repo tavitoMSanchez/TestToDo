@@ -113,9 +113,7 @@ const router = useRouter()
                     }else{
                     this.visibleDelete = false;  
                     this.visibleAdd = true;    
-                    }
-
-                  console.log(this.visible)
+                    }            
                    },                  
                    showModal() {
                     this.isModalVisible = true;
@@ -224,14 +222,11 @@ const router = useRouter()
                                 }
                             })            
                         },
-                    editTask (id){  
-                        console.log(id)
+                    editTask (id){                        
                         axios.get('/api/get_edit_task/'+id)
                                     .then((response) =>{
                                     let dataform = []
-                                    dataform  =  response.data;
-                                        console.log(dataform);
-                                    console.log(dataform.title);
+                                    dataform  =  response.data;                                  
                                     this.$refs.childComponent.editForm(dataform);
                                         this.isModalVisible = true;
                                     })
@@ -311,8 +306,7 @@ const router = useRouter()
                                 }
                             })
                     },
-                    saveTask(obj){
-                        console.log(obj.id)
+                    saveTask(obj){                      
                         if(obj.id == ''){
                             axios.post("/api/add_task/",obj)
                             .then((response)=>{

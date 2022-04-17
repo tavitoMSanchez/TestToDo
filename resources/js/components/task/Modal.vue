@@ -72,11 +72,7 @@
         this.$emit('close');
         this.resetForm()
         this.attemptSubmit = false;
-      },
-      cleanform()
-      {
-        console.log("entro limpiar");
-      },
+      },      
       resetForm(){  
       this.formx.id = ''    
       this.formx.title = ''
@@ -97,7 +93,7 @@
                 }
                 else
                 {
-                   this.loginUser() 
+                   this.submitForm() 
                 }
             },
       submitForm() {
