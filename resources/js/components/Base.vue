@@ -2,13 +2,14 @@
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">           
             <a class="navbar-brand ps-3" >To-Do</a>       
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
-
+            <h5 class="text-center" style="color:white">{{currentUser.email}}</h5>
             <ul class="navbar-nav ms-auto mr-md-0 me-3 me-lg-4">
-                            <h5 class="text-center" style="color:white">{{currentUser.email}}</h5> 
+                          
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">                  
                         <li><hr class="dropdown-divider" /></li>
+                         
                         <li class="text-center"> <a type="button" @click.prevent="logout">Cerrar Sesión<i class="fas fa-sign-out-alt"></i></a></li>
                     </ul>
                 </li>

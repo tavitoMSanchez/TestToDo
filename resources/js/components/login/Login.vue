@@ -7,7 +7,7 @@
                  <h5 class="card-title text-center mb-5 fw-light fs-5">Iniciar Sesión vue</h5>                  
                   <form @submit.prevent>               
                      <div class="form-floating mb-3">
-                         <input id="email" type="email" class="form-control" name="email" v-bind:class="{ 'is-invalid': attemptSubmit && missingName }" required  v-model="form.email" autofocus>
+                         <input id="email" type="email" class="form-control" name="email" v-bind:class="{ 'is-invalid': attemptSubmit && missingEmail }" required  v-model="form.email" autofocus>
                          <label for="floatingInput">Correo Electronico</label>
                          <div class="invalid-feedback">El campo es requiredo.</div>
                      </div>
@@ -41,14 +41,13 @@ export default {
     },
     computed:
     {
-        missingName () { return this.form.email == undefined || this.form.email ==  '' ; },
+        missingEmail () { return this.form.email == undefined || this.form.email ==  '' ; },
         missingPassword () { return this.form.password == '' || this.form.password == undefined ; },
     },
     methods:{
-            validateForm () {   
-                console.log(this.form.name)           
+            validateForm () {
                 this.attemptSubmit = true;
-                if (this.missingName || this.missingPassword) {
+                if (this.missingEmail || this.missingPassword) {
                     event.preventDefault();
                 }
                 else
